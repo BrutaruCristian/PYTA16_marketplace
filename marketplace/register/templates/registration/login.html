@@ -1,0 +1,14 @@
+{% extends "marketplaceapp/base.html" %}
+{% block content %}
+<div class="container spaced-top-5">
+  <div class="large-12 columns">
+      <h2>Autentificare</h2>
+      <form method="POST" action="{% url 'login' %}" name="login" id="login">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn-custom spaced-top-2">Autentificare</button>
+            <p class="spaced-top-2">Nu ai cont? <a href="{% url 'register' %}">Inregistreaza-te</a></p>
+      </form>
+  </div>
+</div>
+{% endblock %}
